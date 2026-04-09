@@ -3,284 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moreen Wanjiku | Portfolio</title>
+    <title>Moreen Wanjiku | Portfolio 2026</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --sunshine-light: #fffdf5;
-            --sunshine-main: #fbbf24; /* Amber/Sunshine */
-            --sunshine-soft: #fef3c7;
-            --text-dark: #1e293b;
-            --text-muted: #475569;
+            --sun-bg: #fffdfa;
+            --sun-main: #fbbf24;
+            --sun-accent: #d97706;
+            --sun-soft: #fef3c7;
+            --text-dark: #0f172a;
             --white: #ffffff;
         }
 
         body {
-            background-color: var(--sunshine-light);
+            background-color: var(--sun-bg);
             color: var(--text-dark);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        h1, h2, .nav-brand {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
-        }
-
-        /* Fixed Navigation */
+        /* Responsive Navigation */
         .navbar {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--sunshine-soft);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--sun-soft);
             padding: 1rem 0;
         }
 
-        /* Hero Section - Sunshine Style */
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-dark) !important;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--sun-accent) !important; }
+
+        /* Hero Section */
         .hero {
-            padding: 140px 0 80px;
-            background: linear-gradient(180deg, var(--sunshine-soft) 0%, var(--sunshine-light) 100%);
-            border-bottom: 1px solid var(--sunshine-soft);
+            padding: 160px 0 100px;
+            background: radial-gradient(circle at top right, var(--sun-soft), transparent);
         }
 
         .profile-img {
-            width: 240px;
-            height: 240px;
-            border-radius: 30px;
+            width: 280px;
+            height: 280px;
+            border-radius: 40px;
             object-fit: cover;
-            object-position: top; /* Ensures the top of the head isn't cut off */
-            border: 8px solid var(--white);
-            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+            object-position: top; /* Prevents head cut-off */
+            border: 10px solid var(--white);
+            box-shadow: 0 25px 50px -12px rgba(217, 119, 6, 0.15);
+        }
+
+        /* Section Cards (Jay Edwards Style Hierarchy) */
+        .bento-card {
             background: var(--white);
+            border: 1px solid var(--sun-soft);
+            border-radius: 30px;
+            padding: 35px;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Cards & Sections */
-        .section-card {
-            background: var(--white);
-            border: 1px solid var(--sunshine-soft);
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
+        .bento-card:hover {
+            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.05);
+            border-color: var(--sun-main);
         }
 
-        .section-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--sunshine-main);
-        }
-
-        .section-title {
-            color: var(--sunshine-main);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 800;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        /* Experience Items */
-        .exp-box {
-            border-left: 3px solid var(--sunshine-soft);
-            padding-left: 20px;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .exp-box:hover {
-            border-left-color: var(--sunshine-main);
-        }
-
-        /* Skill Tags */
-        .tag {
-            background: var(--sunshine-soft);
-            color: #92400e;
-            padding: 8px 16px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .category-label {
             display: inline-block;
-            margin: 5px;
+            background: var(--sun-soft);
+            color: var(--sun-accent);
+            padding: 6px 15px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 15px;
         }
+
+        /* List Items & Links */
+        .org-group { margin-bottom: 25px; }
+        .org-name { font-weight: 800; color: var(--text-dark); font-size: 1.1rem; margin-bottom: 10px; display: block; }
+        
+        .course-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+
+        .course-link:hover { color: var(--sun-accent); padding-left: 5px; }
+        .course-link i { font-size: 0.8rem; margin-right: 10px; color: var(--sun-main); }
 
         /* Buttons */
-        .btn-sun {
-            background: var(--sunshine-main);
-            color: var(--text-dark);
-            padding: 12px 28px;
-            border-radius: 14px;
+        .btn-connect {
+            background: #0077b5; /* LinkedIn Blue */
+            color: white;
+            padding: 14px 30px;
+            border-radius: 16px;
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            border: none;
+            gap: 12px;
             transition: 0.3s;
         }
 
-        .btn-sun:hover {
-            background: var(--text-dark);
-            color: var(--white);
-            transform: translateY(-2px);
+        .btn-connect:hover {
+            background: #004182;
+            color: white;
+            transform: translateY(-3px);
         }
 
-        .btn-outline {
-            border: 2px solid var(--sunshine-main);
-            color: var(--text-dark);
-            padding: 10px 24px;
-            border-radius: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: 0.3s;
+        .tag-pill {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            margin: 4px;
+            display: inline-block;
         }
 
         footer {
-            background: var(--white);
-            padding: 80px 0;
-            border-top: 1px solid var(--sunshine-soft);
+            padding: 100px 0 50px;
+            border-top: 1px solid var(--sun-soft);
             text-align: center;
         }
-
-        .social-link {
-            font-size: 1.8rem;
-            color: var(--text-muted);
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-
-        .social-link:hover { color: var(--sunshine-main); }
-
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand text-dark" href="#">MW<span style="color:var(--sunshine-main)">.</span></a>
-            <div class="ms-auto">
-                <a href="#contact" class="btn-sun py-2 px-4">Contact Me</a>
+            <a class="navbar-brand fw-bold" href="#">MW<span style="color:var(--sun-main)">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ecosystem">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero" id="about">
         <div class="container">
             <div class="row align-items-center g-5">
-                <div class="col-lg-4 text-center">
-                    <img src="profile.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Moreen+Wanjiku&background=fbbf24&color=fff&size=300'" class="profile-img shadow-lg" alt="Moreen Wanjiku">
+                <div class="col-lg-5 text-center text-lg-start">
+                    <img src="profile.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Moreen+Wanjiku&background=fbbf24&color=fff&size=400'" class="profile-img" alt="Moreen Wanjiku">
                 </div>
-                <div class="col-lg-8">
-                    <span class="section-title">Professional Introduction</span>
-                    <h1 class="display-3 mb-4">Librarian & IT Support <br>Specialist</h1>
-                    <p class="lead text-muted mb-4" style="max-width: 650px;">
-                        With 5 years of experience across the public and private sectors, I specialize in ICT integration, automated records management, and modernizing library services.
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold mb-4">Bridging Information <span style="color:var(--sun-accent)">Science</span> & <span style="color:var(--sun-accent)">IT</span>.</h1>
+                    <p class="lead text-muted mb-5">
+                        Librarian & IT Specialist with 5 years of expertise in digital resource management, cloud integration, and user-centric information services.
                     </p>
-                    <div class="d-flex gap-3">
-                        <a href="#contact" class="btn-sun">Send Email</a>
-                        <a href="resume.pdf" class="btn-outline" download>Download Resume <i class="fa-solid fa-download ms-1"></i></a>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="https://www.linkedin.com/in/moreen-wanjiku/" target="_blank" class="btn-connect">
+                            <i class="fa-brands fa-linkedin fs-4"></i> Connect on LinkedIn
+                        </a>
+                        <a href="mailto:wanjikumoreenwanjiru@gmail.com" class="btn-outline-dark border-2 p-3 rounded-4 fw-bold text-decoration-none">
+                            <i class="fa-solid fa-envelope me-2"></i> Email Me
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="py-5">
+    <section class="py-5">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 
-                <div class="col-lg-7">
-                    
-                    <div class="section-card">
-                        <span class="section-title">Work Experience</span>
-                        <div class="exp-box">
-                            <h5 class="fw-bold mb-0">Librarian</h5>
-                            <small class="text-muted">Outspan Medical College | 2021 – Present</small>
-                            <p class="mt-2 text-muted">Management of digital resources, KOHA integration, and technical support for knowledge services.</p>
+                <div class="col-md-6">
+                    <div class="bento-card">
+                        <span class="category-label">Library & Information Expertise</span>
+                        <h3 class="fw-bold mb-4">Core Competencies</h3>
+                        <div class="mb-4">
+                            <span class="tag-pill">Information Literacy Instruction</span>
+                            <span class="tag-pill">Academic Research Support</span>
+                            <span class="tag-pill">Koha & DSpace Administration</span>
+                            <span class="tag-pill">Patron-Centric Customer Service</span>
+                            <span class="tag-pill">Digital Archiving</span>
+                            <span class="tag-pill">Automated Records Management</span>
+                            <span class="tag-pill">Database Administration</span>
                         </div>
-                        <div class="exp-box">
-                            <h5 class="fw-bold mb-0">ICT Officer</h5>
-                            <small class="text-muted">Ministry of Education | 2023 – 2024</small>
-                            <p class="mt-2 text-muted">Deployment of Digital Literacy Programmes and classroom ICT support.</p>
-                        </div>
-                        <div class="exp-box" style="border:none">
-                            <h5 class="fw-bold mb-0">ICT Records Officer</h5>
-                            <small class="text-muted">Nyeri County Government | 2022 – 2023</small>
-                            <p class="mt-2 text-muted">Automation of HR registries and departmental network troubleshooting.</p>
-                        </div>
+                        <p class="small text-muted">Specializing in the intersection of traditional knowledge organization and modern cloud-based delivery systems.</p>
                     </div>
-
-                    <div class="section-card">
-                        <span class="section-title">Academic History</span>
-                        <div class="mb-3">
-                            <h6 class="fw-bold mb-0">BSc. Information Science & Library Studies</h6>
-                            <small class="text-muted">Chuka University | 2016 – 2020</small>
-                        </div>
-                        <div class="mb-3">
-                            <h6 class="fw-bold mb-0">Computer Applications Certificate</h6>
-                            <small class="text-muted">Inoorero University</small>
-                        </div>
-                    </div>
-
                 </div>
 
-                <div class="col-lg-5">
-                    
-                    <div class="section-card">
-                        <span class="section-title">Professional Skills</span>
-                        <div class="mb-2">
-                            <span class="tag">Koha ILS</span>
-                            <span class="tag">DSpace</span>
-                            <span class="tag">AWS Cloud</span>
-                            <span class="tag">Network Maintenance</span>
-                            <span class="tag">Records Automation</span>
-                            <span class="tag">Data Recovery</span>
-                            <span class="tag">Database Management</span>
+                <div class="col-md-6">
+                    <div class="bento-card">
+                        <span class="category-label">Academic Background</span>
+                        <h3 class="fw-bold mb-4">Education</h3>
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-1">BSc. Information Science & Library Studies</h5>
+                            <p class="text-muted mb-0">Chuka University | 2016 – 2020</p>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Certificate in Computer Applications</h5>
+                            <p class="text-muted">Inoorero University</p>
                         </div>
                     </div>
-
-                    <div class="section-card">
-                        <span class="section-title">Certifications & Courses</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-3"><i class="fa-solid fa-circle-check text-warning me-2"></i> AWS Cloud Practitioner (Ajira)</li>
-                            <li class="mb-3"><i class="fa-solid fa-circle-check text-warning me-2"></i> Introduction to Cybersecurity (Cisco)</li>
-                            <li class="mb-3"><i class="fa-solid fa-circle-check text-warning me-2"></i> KENET Instructor Course</li>
-                            <li class="mb-3"><i class="fa-solid fa-circle-check text-warning me-2"></i> Personal Branding for Success</li>
-                            <li class="mb-3"><i class="fa-solid fa-circle-check text-warning me-2"></i> Emotional Intelligence</li>
-                            <li><i class="fa-solid fa-circle-check text-warning me-2"></i> Financial Literacy</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-card">
-                        <span class="section-title">Professional Bodies</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2 fw-bold small">Network of Information Professionals (NIPK)</li>
-                            <li class="mb-2 fw-bold small">Kenya Library Association (KLA)</li>
-                            <li class="fw-bold small">Internet Society Kenya Chapter</li>
-                        </ul>
-                    </div>
-
                 </div>
+
+                <div id="experience" class="col-12">
+                    <div class="bento-card">
+                        <span class="category-label">Professional Career</span>
+                        <h3 class="fw-bold mb-4">Work Experience</h3>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <h5 class="fw-bold mb-1">Librarian</h5>
+                                <p class="text-accent small fw-bold">Outspan Medical College (2021-Present)</p>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <h5 class="fw-bold mb-1">ICT Officer</h5>
+                                <p class="text-accent small fw-bold">Ministry of Education (2023-2024)</p>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <h5 class="fw-bold mb-1">ICT Records Officer</h5>
+                                <p class="text-accent small fw-bold">Nyeri County Government (2022-2023)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ecosystem" class="col-12">
+                    <div class="bento-card">
+                        <span class="category-label">Professional Development Ecosystem</span>
+                        <h3 class="fw-bold mb-5">Certifications & Advanced Learning</h3>
+                        
+                        <div class="row g-5">
+                            <div class="col-lg-3 col-md-6">
+                                <span class="org-name"><i class="fa-brands fa-aws me-2"></i>AWS re/Start</span>
+                                <a href="#" class="course-link"><i class="fa-solid fa-certificate"></i> AWS Cloud Practitioner</a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6">
+                                <span class="org-name"><i class="fa-solid fa-network-wired me-2"></i>Cisco Academy</span>
+                                <a href="#" class="course-link"><i class="fa-solid fa-shield-halved"></i> Cybersecurity Essentials</a>
+                                <a href="#" class="course-link"><i class="fa-solid fa-code"></i> Python Fundamentals</a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6">
+                                <span class="org-name"><i class="fa-solid fa-university me-2"></i>KENET</span>
+                                <a href="#" class="course-link"><i class="fa-solid fa-chalkboard-user"></i> Certified Instructor Course</a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6">
+                                <span class="org-name"><i class="fa-solid fa-briefcase me-2"></i>Deloitte WorldClass</span>
+                                <a href="https://worldclasseduhub.vuca.co.za/courses/emotional-intelligence/" target="_blank" class="course-link"><i class="fa-solid fa-link"></i> Emotional Intelligence</a>
+                                <a href="https://worldclasseduhub.vuca.co.za/courses/effective-leadership/" target="_blank" class="course-link"><i class="fa-solid fa-link"></i> Effective Leadership</a>
+                                <a href="https://worldclasseduhub.vuca.co.za/courses/critical-thinking/" target="_blank" class="course-link"><i class="fa-solid fa-link"></i> Critical Thinking</a>
+                                <a href="https://worldclasseduhub.vuca.co.za/courses/real-world-readiness/" target="_blank" class="course-link"><i class="fa-solid fa-link"></i> Real-World Readiness</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </main>
+    </section>
 
     <footer id="contact">
         <div class="container">
-            <h2 class="mb-4">Get in Touch</h2>
-            <p class="text-muted mb-5">I'm currently available for projects and collaborations.</p>
-            
-            <a href="mailto:wanjikumoreenwanjiru@gmail.com" class="btn-sun mb-5"><i class="fa-solid fa-envelope"></i> Send an Email</a>
-            
-            <div class="mt-4">
-                <a href="https://www.linkedin.com/in/moreen-wanjiku/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fa-solid fa-folder-open"></i></a>
+            <h2 class="fw-bold mb-4">Let's Connect</h2>
+            <div class="d-flex justify-content-center gap-4 mb-5">
+                <a href="https://www.linkedin.com/in/moreen-wanjiku/" target="_blank" class="text-dark fs-2"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:wanjikumoreenwanjiru@gmail.com" class="text-dark fs-2"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            
-            <p class="mt-5 small text-muted">&copy; 2024 Moreen Wanjiku. Built with Sunshine.</p>
+            <p class="text-muted small">&copy; 2026 Moreen Wanjiku | Professional Information Portfolio</p>
         </div>
     </footer>
 
