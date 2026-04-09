@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moreen Wanjiku Portfolio - Librarian, IT Support, Records Management">
+    <meta name="keywords" content="Moreen Wanjiku, Portfolio, Librarian, IT Support, AWS, Koha">
+    <meta name="author" content="Moreen Wanjiku">
+    <title>Moreen Wanjiku | Professional Portfolio</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0f172a; /* Deep Navy */
+            --secondary-color: #3b82f6; /* Bright Blue */
+            --bg-light: #f8fafc;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: var(--bg-light);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-weight: 600;
+        }
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .hero-contact a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .hero-contact a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        /* Cards & Containers */
+        .content-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills Tags */
+        .skill-tag {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        .skill-tag:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Lists */
+        ul.custom-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.custom-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: #475569;
+        }
+        ul.custom-list li::before {
+            content: '\f054'; /* FontAwesome chevron */
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">MW.</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education & Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Moreen Wanjiku</h1>
+            <h2>Librarian | IT Support | Records & Information Management</h2>
+            <p class="lead w-75 mx-auto mb-4 text-light">Passionate about continuous learning, emerging technologies, and delivering exceptional service through efficient information systems.</p>
+            
+            <div class="hero-contact mt-4">
+                <a href="mailto:wanjikumoreenwanjiru@gmail.com"><i class="fa-solid fa-envelope"></i> wanjikumoreenwanjiru@gmail.com</a>
+                <a href="tel:+254798633842"><i class="fa-solid fa-phone"></i> +254 798 633 842</a>
+                <a href="https://www.linkedin.com/in/moreenwanjiku" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fa-solid fa-location-dot"></i> Nyeri, Kenya</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="section-title">Professional Summary</h3>
+                    <p class="lead" style="line-height: 1.8;">
+                        I have 5 years of hands-on experience working in both the public and private sectors. My expertise spans ICT integration in education, office registry automation, library software integration (KOHA, DSpace), and electronic records management. 
+                    </p>
+                    <p style="line-height: 1.8; color: #475569;">
+                        I am highly proficient in digital literacy instruction, network and computer troubleshooting, database management, and cloud architecture basics. Whether it is developing a leave computation calculator or managing an institutional repository, I am dedicated to keeping systems organized, secure, and user-friendly.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="content-card bg-light border-0">
+                        <h5 class="mb-3 text-uppercase fw-bold" style="color: var(--primary-color);">Professional Memberships</h5>
+                        <ul class="custom-list">
+                            <li><strong>NIPK:</strong> Network of Information Professionals of Kenya (Full Member No. NIPK378/2022)</li>
+                            <li><strong>KLA:</strong> Kenya Library Association (Full Member No. KLA/F/1276)</li>
+                            <li><strong>ISOC:</strong> Internet Society Kenya Chapter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-white">
+        <div class="container">
+            <h3 class="section-title">Core Competencies & Skills</h3>
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <span class="skill-tag">AWS Cloud Computing</span>
+                    <span class="skill-tag">Terraform (IaC)</span>
+                    <span class="skill-tag">Cybersecurity & Threat Detection</span>
+                    <span class="skill-tag">Network Troubleshooting</span>
+                    <span class="skill-tag">Hardware/Software Maintenance</span>
+                    <span class="skill-tag">Database Management</span>
+                    
+                    <span class="skill-tag">Koha ILS</span>
+                    <span class="skill-tag">DSpace (Institutional Repositories)</span>
+                    <span class="skill-tag">Records Classification (LCC)</span>
+                    <span class="skill-tag">Information Literacy</span>
+                    <span class="skill-tag">E-Resource Management</span>
+                    
+                    <span class="skill-tag">Data Entry & Automation</span>
+                    <span class="skill-tag">Digital Literacy Instruction</span>
+                    <span class="skill-tag">Research Capabilities</span>
+                    <span class="skill-tag">Exceptional Customer Service</span>
+                    <span class="skill-tag">Project Supervision</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h3 class="section-title">Work Experience</h3>
+            <div class="row mt-4">
+                
+                <div class="col-md-6">
+                    <div class="content-card">
+                        <h4 style="color: var(--primary-color);">Librarian</h4>
+                        <h6 class="text-muted"><i class="fa-solid fa-building"></i> Outspan Global University | <i class="fa-solid fa-calendar"></i> Jul 2024 - Present</h6>
+                        <hr>
+                        <ul class="custom-list">
+                            <li>Manage library computer systems and assist patrons with troubleshooting.</li>
+                            <li>Coordinate interlibrary loan services with KNLS Nyeri, PCEA Tumutumu, and Inspire Library.</li>
+                            <li>Catalog, classify, and process newly acquired resources and digitize materials for e-access.</li>
+                            <li>Conduct basic repairs to circulation materials and provide research/reference assistance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="content-card">
+                        <h4 style="color: var(--primary-color);">ICT Officer</h4>
+                        <h6 class="text-muted"><i class="fa-solid fa-building"></i> Ministry Of Education (MOE) | <i class="fa-solid fa-calendar"></i> Feb 2023 - Feb 2024</h6>
+                        <hr>
+                        <ul class="custom-list">
+                            <li>Supported e-learning and content development in line with curriculum designs in Tetu Sub County.</li>
+                            <li>Provided first-line support and maintenance of ICT devices for primary schools.</li>
+                            <li>Sensitized teachers on digital literacy devices and ethical technology use.</li>
+                            <li>Assisted in integrating ICT into teaching, learning, and assessment deliveries.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="content-card">
+                        <h4 style="color: var(--primary-color);">Registry ICT Officer</h4>
+                        <h6 class="text-muted"><i class="fa-solid fa-building"></i> Nyeri County Government (HR) | <i class="fa-solid fa-calendar"></i> Jan 2022 - Jan 2023</h6>
+                        <hr>
+                        <ul class="custom-list">
+                            <li>Stored, indexed, and classified electronic and physical records using efficient filing systems.</li>
+                            <li>Scanned HR documents for records automation and generated payslips via the IPPD system.</li>
+                            <li>Maintained file movement registers and handled IT network troubleshooting for the department.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="content-card">
+                        <h4 style="color: var(--primary-color);">Library Assistant</h4>
+                        <h6 class="text-muted"><i class="fa-solid fa-building"></i> Outspan Medical College | <i class="fa-solid fa-calendar"></i> Feb 2021 - Dec 2021</h6>
+                        <hr>
+                        <ul class="custom-list">
+                            <li>Charged and discharged resources using the integrated school library system.</li>
+                            <li>Assisted in computer literacy practical classes and managed clerical tasks including data entry.</li>
+                            <li>Guided patrons in accessing e-resources and offered robust reference assistance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="col-12 mt-2">
+                    <div class="content-card">
+                        <h4 style="color: var(--primary-color);">Student Library Assistant</h4>
+                        <h6 class="text-muted"><i class="fa-solid fa-building"></i> Dedan Kimathi University of Technology (DeKUT) | <i class="fa-solid fa-calendar"></i> May 2019 - Aug 2019</h6>
+                        <hr>
+                        <p class="mb-0 text-muted">Operated the Koha library system, managed the institutional repository, conducted user education/information literacy training, compiled instructional guides, and offered specialized research guidance at the Africana section.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-6">
+                    <h3 class="section-title">Education & Certifications</h3>
+                    
+                    <div class="mb-4 mt-4">
+                        <h5 class="fw-bold"><i class="fa-solid fa-graduation-cap text-primary"></i> Bachelor of Science in Information Science</h5>
+                        <p class="mb-1">Chuka University | 2016 - 2020</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold"><i class="fa-solid fa-cloud text-primary"></i> AWS Certified Cloud Practitioner</h5>
+                        <p class="mb-1">Ajira AWS re/Start | 2024 - Current</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold"><i class="fa-solid fa-shield-halved text-primary"></i> Introduction to Cybersecurity</h5>
+                        <p class="mb-1">Cisco Virtual Academy | 2021</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold"><i class="fa-solid fa-desktop text-primary"></i> Computer Applications</h5>
+                        <p class="mb-1">Inoorero University | 2013 - 2014</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="section-title">Professional Development</h3>
+                    <p class="text-muted mb-4 mt-4">Recent specialized short courses completed via VUCA/WorldClassEduHub and KENET:</p>
+                    
+                    <div class="row g-2">
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> KENET Instructor Course</div></div>
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Personal Branding</div></div>
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Emotional Intelligence</div></div>
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Effective Leadership</div></div>
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Critical Thinking</div></div>
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Digital Literacy</div></div>
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Financial Literacy</div></div>
+                        <div class="col-md-6"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Environmental Sustainability</div></div>
+                        <div class="col-12"><div class="p-2 border rounded bg-light"><i class="fa-solid fa-check text-success me-2"></i> Entrepreneurial Skills Dev (Parts 1 & 2)</div></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2 class="mb-4">Let's Connect</h2>
+            <p class="mb-4">Currently based in Nyeri, Kenya (1650-10100). Available for opportunities in Library Sciences, IT Support, and Cloud Administration.</p>
+            
+            <div class="social-icons mb-4">
+                <a href="mailto:wanjikumoreenwanjiru@gmail.com" title="Email Me"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/moreenwanjiku" target="_blank" title="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="tel:+254798633842" title="Call Me"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://wa.me/254798633842" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            
+            <p class="mb-0 text-muted" style="font-size: 0.9rem;">&copy; 2024 Moreen Wanjiku. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
